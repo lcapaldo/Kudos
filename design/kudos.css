@@ -1,0 +1,8 @@
+.ItemLikes{ padding:0; margin: 5px 0; font-size: 11px; }
+.ItemLikes p {padding: 0px; margin: 0;}
+p.loves span {color: #060; font-weight: 700;}
+p.hates span {color: #f00; font-weight: 700;}
+.Kudos { color: #000; }
+
+.Kudos .p { display: inline-block; background: #060; -moz-border-radius: 2px; -webkit-border-radius: 2px; color: #fff; }
+.Kudos .m { display: inline-block; background: #f00; -moz-border-radius: 2px; -webkit-border-radius: 2px; color: #fff; }
