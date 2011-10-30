@@ -343,11 +343,11 @@ class KudosPlugin extends Gdn_Plugin {
   	$Kudos = $this->KudosModel->GetDiscussionKudos($DiscussionID);
   	if($CommentID) $Kudos = $this->KudosModel->GetCommentKudos($CommentID);
   	
-  	if($this->loved($Kudos)) $Toolbar .= '<b>+1</b>&nbsp;';
-  	else $Toolbar .= '<a href="'.Url('discussion/kudos/'.$DiscussionID.'/1/'.$CommentID).'">+1</a>&nbsp;';
+  	if($this->loved($Kudos)) $Toolbar .= '<b>You liked this</b>&nbsp;';
+  	else $Toolbar .= '<a href="'.Url('discussion/kudos/'.$DiscussionID.'/1/'.$CommentID).'">Like</a>&nbsp;';
   	
   	if(count($Kudos['l']))
-  	$Toolbar .= '&nbsp;(+'.count($Kudos['l']).')';
+  	$Toolbar .= '&nbsp;('.count($Kudos['l']).' Likes)';
 
     return $Toolbar;
   }
