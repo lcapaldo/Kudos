@@ -345,11 +345,9 @@ class KudosPlugin extends Gdn_Plugin {
   	
   	if($this->loved($Kudos)) $Toolbar .= '<b>+1</b>&nbsp;';
   	else $Toolbar .= '<a href="'.Url('discussion/kudos/'.$DiscussionID.'/1/'.$CommentID).'">+1</a>&nbsp;';
-  	if($this->hated($Kudos)) $Toolbar .= '<b>-1</b>';
-  	else $Toolbar .= '<a href="'.Url('discussion/kudos/'.$DiscussionID.'/2/'.$CommentID).'">-1</a>';
   	
-  	if(count($Kudos['l']) || count($Kudos['h']))
-  	$Toolbar .= '&nbsp;(+'.count($Kudos['l']).' / -'.count($Kudos['h']).' )';
+  	if(count($Kudos['l']))
+  	$Toolbar .= '&nbsp;(+'.count($Kudos['l']).')';
 
     return $Toolbar;
   }
